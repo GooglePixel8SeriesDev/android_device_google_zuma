@@ -29,6 +29,10 @@ PRODUCT_PACKAGES += \
 # Google Assistant
 PRODUCT_PRODUCT_PROPERTIES += ro.opa.eligible_device=true
 
+# Google Camera
+$(call inherit-product-if-exists, vendor/google/camera/camera.mk)
+PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
+
 # Google Face Unlock
 $(call inherit-product-if-exists, vendor/google/faceunlock/config.mk)
 
